@@ -1,6 +1,7 @@
 ## Household Survey Maps
 
-This is a landing page trial for the LAC household survey travel maps. 
+This is webpage contains the main results from the consolidated household travel surveys of Bogota, Montevideo, Sao Paulo, Mexico City, Santiago and Buenos Aires. Within the analyses there is a general overview of the variables considered and information on the surveys geographic coverage. Considering the data can be unfolded into trip data and individual characteristics, the first analysis focuses on the time dimension of the trips performed and the second one on individuals and the non-time related aspects of the trip (mode, distance, motives, etc). 
+Then the maps section combines the different modal flows with the socioeconomic data for each city along with its basic transit infrastructure. This can lead to finding the socio-geographic motivation for different mode usage in Latin American Cities. 
 
 ### Analyses
 
