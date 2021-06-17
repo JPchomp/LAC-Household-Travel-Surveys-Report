@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Socioeconomic Analysis</title>
+
+<script src="04_socioeconomic_analysis_files/header-attrs-2.8/header-attrs.js"></script>
+<script src="04_socioeconomic_analysis_files/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="04_socioeconomic_analysis_files/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="04_socioeconomic_analysis_files/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="04_socioeconomic_analysis_files/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="04_socioeconomic_analysis_files/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="04_socioeconomic_analysis_files/navigation-1.1/tabsets.js"></script>
+<link href="04_socioeconomic_analysis_files/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="04_socioeconomic_analysis_files/highlightjs-9.12.0/highlight.js"></script>
+<link href="04_socioeconomic_analysis_files/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
+<script src="04_socioeconomic_analysis_files/pagedtable-1.1/js/pagedtable.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+<style type="text/css">
+  p.abstract{
+    text-align: center;
+    font-weight: bold;
+  }
+  div.abstract{
+    margin: auto;
+    width: 90%;
+  }
+</style>
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Socioeconomic Analysis</h1>
+<div class="abstract">
+<p class="abstract">Abstract</p>
+<p>This section looks at the distribution of different survey parameters characterizing daily commuting trips for 6 LAC cities. The main characteristics analyzed are Socioeconomic strata (SES) of the individual performing the trip, mode used for the trip, gender of the individual, and age of the individual.</p>
+</div>
+
+</div>
+
+<div id="TOC">
+<ul>
+<li><a href="#socio-economic-strata"><span class="toc-section-number">1</span> Socio-economic strata</a></li>
+<li><a href="#mode"><span class="toc-section-number">2</span> Mode</a></li>
+<li><a href="#gender"><span class="toc-section-number">3</span> Gender</a></li>
+<li><a href="#age"><span class="toc-section-number">4</span> Age</a></li>
+</ul>
+</div>
+
+<div id="socio-economic-strata" class="section level1" number="1">
+<h1 number="1"><span class="header-section-number">1</span> Socio-economic strata</h1>
+<div id="modes" class="section level2" number="1.1">
+<h2 number="1.1"><span class="header-section-number">1.1</span> Modes</h2>
+<p><img src="04_socioeconomic_analysis_files/figure-html/unnamed-chunk-2-1.png" width="960" /></p>
+<p>There is a clear and well documented difference in mode use by strata. Lower income groups walk and use more transit, and higher incomes rely on private vehicles.</p>
+</div>
+<div id="trip-duration" class="section level2" number="1.2">
+<h2 number="1.2"><span class="header-section-number">1.2</span> Trip Duration</h2>
+<p><img src="04_socioeconomic_analysis_files/figure-html/unnamed-chunk-3-1.png" width="960" /></p>
+<p>Although there is not a clear cut common trend for all cities, Bogota, Mexico, Montevideo and Sao Paulo exhibit more larger trip durations (60 minutes or more) in lower income sectors. Conversely, Buenos aires, Montevideo and Santiago also show more participation of lower income groups in the shortest trips, below 15 minutes.</p>
+<div id="trip-duration-quartiles" class="section level3" number="1.2.1">
+<h3 number="1.2.1"><span class="header-section-number">1.2.1</span> Trip Duration: Quartiles</h3>
+<p><img src="04_socioeconomic_analysis_files/figure-html/unnamed-chunk-4-1.png" width="960" /></p>
+<p>This aggregated version of socioeconomic strata shows the different trends by city, but with pockets of specific durations in some stratas.</p>
+</div>
+</div>
+<div id="distance" class="section level2" number="1.3">
+<h2 number="1.3"><span class="header-section-number">1.3</span> Distance</h2>
+<p>Distance information is missing for Buenos Aires.</p>
+<p><img src="04_socioeconomic_analysis_files/figure-html/unnamed-chunk-5-1.png" width="960" /></p>
+<p>Partially explaining the distribution for trip durations, and showing most of the trips are below 20km in distance; except for the case of Mexico, where longer trips are a significant portion, specially for lower income groups.</p>
+<p><img src="04_socioeconomic_analysis_files/figure-html/unnamed-chunk-6-1.png" width="960" /></p>
+<p>Montevideo, SaoPaulo, Santiago show shorter trip duration for lower ses groups. Bogota shows a reversed trend, and mexico shows a high peak of longer distances in the lower groups. Santiago and Sao Paulo show higher degrees of noise in the tails of lower income groups, but not in higher ones.</p>
+</div>
+<div id="commercial-commuting-speed" class="section level2" number="1.4">
+<h2 number="1.4"><span class="header-section-number">1.4</span> Commercial commuting speed</h2>
+<p>Combining the trip duration and distance data, we obtain an average or “commercial” speed of the commute. Again, distance data is not present for Buenos Aires.</p>
+<p><img src="04_socioeconomic_analysis_files/figure-html/unnamed-chunk-7-1.png" width="960" /></p>
+<p>Similarly to before, Montevideo, Santiago, and Sao Paulo show higher incomes travelling faster (observe the diffusion of the peak for higher income groups). Bogota shows an opposite trend, with similar distributions for all sectors. Mexico exhibits the most distinct variation across groups.</p>
+</div>
+<div id="motives" class="section level2" number="1.5">
+<h2 number="1.5"><span class="header-section-number">1.5</span> Motives</h2>
+<p>Although not all surveys offer the same possible answers to the trip motive, these were aggregated to the 9 major categories outlined below.</p>
+<p><img src="04_socioeconomic_analysis_files/figure-html/unnamed-chunk-8-1.png" width="960" /></p>
+<p>Trends can be seen for studying and working, not equal across all cities. The match between Santiago, Sao Paulo and Montevideo here may be explaining the similarities observed before. Transporting someone, recreation, errands and shopping have varying degrees of relevance by city.</p>
+</div>
+<div id="trips-from-outside-towards-outside-of-the-metropolitan-area-limits" class="section level2" number="1.6">
+<h2 number="1.6"><span class="header-section-number">1.6</span> Trips from outside / towards outside of the metropolitan area limits</h2>
+<p>Using the post processing within the IDB that tried to identified patterns for trips that were outside the limits of the metropolitan area. These were distinguished as originating outside, or bound for outside of the city limits. Sao Paulo and Buenos Aires were excluded from this analysis due to the lack of geographical coordinates in the survey responses.</p>
+<p><img src="04_socioeconomic_analysis_files/figure-html/unnamed-chunk-9-1.png" width="960" /></p>
+<p>Trips originated and bound for within the metropolitan area were labelled endogenous and filtered out. Trips originated outside and inbound are labelled incoming, thost originated within and with outer destination are labelled outbound, and those originated outside and bound outside of the metropolitan area are labelled external. Endogenous trips are clearly the higher percentage of trips.</p>
+<p>Probably the city size is influencing the values presented, and should be considered along with each city morphology.</p>
+</div>
+</div>
+<div id="mode" class="section level1" number="2">
+<h1 number="2"><span class="header-section-number">2</span> Mode</h1>
+<p>Below we analyze the different trip characteristics by mode used for the trip.</p>
+<div id="travel-time-by-mode" class="section level2" number="2.1">
+<h2 number="2.1"><span class="header-section-number">2.1</span> Travel time by mode</h2>
+<p><img src="04_socioeconomic_analysis_files/figure-html/unnamed-chunk-10-1.png" width="960" /></p>
+<p>The travel time pattern by mode is clear across the region. This could be due to higher speed of the mode, or due to shorter distances being performed.</p>
+</div>
+<div id="travel-distance-by-mode" class="section level2" number="2.2">
+<h2 number="2.2"><span class="header-section-number">2.2</span> Travel distance by mode</h2>
+<p><img src="04_socioeconomic_analysis_files/figure-html/unnamed-chunk-11-1.png" width="960" /></p>
+<p>Here we can conclude the time difference is owed to shorter distances being performed in private modes. Observe there is a higher spread here.</p>
+</div>
+<div id="speed-by-mode" class="section level2" number="2.3">
+<h2 number="2.3"><span class="header-section-number">2.3</span> Speed by Mode</h2>
+<p><img src="04_socioeconomic_analysis_files/figure-html/unnamed-chunk-12-1.png" width="960" /></p>
+<p>Reinforcing the previous diagrams, bus and mass transit perform longer trips, that take more time due to lower commercial speeds.</p>
+</div>
+<div id="motives-1" class="section level2" number="2.4">
+<h2 number="2.4"><span class="header-section-number">2.4</span> Motives</h2>
+<p><img src="04_socioeconomic_analysis_files/figure-html/unnamed-chunk-13-1.png" width="960" /></p>
+<p>1: The role of motorized modes in working trips. 2: Taxi, walking, and private cars have more diverse roles</p>
+<!-- ##  -->
+<!-- ```{r} -->
+<!-- dt = df  %>% -->
+<!-- drop_na(id_ciudad, estrato, distancia ,tiempo_tot, mode, factor) %>% filter(mode %in% c("Mass", "Bus", "Private_Car", "Motorcycle")) %>%  -->
+<!--   filter(id_ciudad == "Bogota") -->
+<!-- dt %>% filter(distancia < 50) %>% filter(tiempo_tot < 250) %>%  -->
+<!--   ggplot(aes(x = tiempo_tot, -->
+<!--              y = distancia, -->
+<!--              color = mode)) +  -->
+<!--   geom_point(alpha = 0.2) + -->
+<!--   geom_smooth(method = "lm",se=TRUE, alpha=.9, size=.5, aes(fill=mode)) + -->
+<!--   facet_wrap( ~ id_ciudad,scales = "free") + -->
+<!--   # scale_x_discrete(guide = c(1,2,3,4,5,6) ) -->
+<!--   scale_fill_brewer(palette = "Accent") + -->
+<!--   labs(title = "Whos farther away from their destination?", -->
+<!--        subtitle = "breakdown of distance by mode", -->
+<!--        y = "Time (minutes)", -->
+<!--        x = "Mode", -->
+<!--        Color = "Mode", -->
+<!--        caption = "Obs: Buenos Aires and Mexico City report 5 and 4 Socioeconomic stratas respectively") -->
+<!-- ``` -->
+</div>
+</div>
+<div id="gender" class="section level1" number="3">
+<h1 number="3"><span class="header-section-number">3</span> Gender</h1>
+<p>This section observes trends by gender of the individual performing the trip.</p>
+<div id="mode-1" class="section level2" number="3.1">
+<h2 number="3.1"><span class="header-section-number">3.1</span> Mode</h2>
+<p><img src="04_socioeconomic_analysis_files/figure-html/unnamed-chunk-14-1.png" width="960" /></p>
+<p>Perhaps the most outstanding pattern is the relation between male oriented private car and female dominated bus in all cities. Taxi and mass transit are also slightly female oriented, and motorcycle clearly male oriented.</p>
+</div>
+<div id="trip-duration-1" class="section level2" number="3.2">
+<h2 number="3.2"><span class="header-section-number">3.2</span> Trip duration</h2>
+<p><img src="04_socioeconomic_analysis_files/figure-html/unnamed-chunk-15-1.png" width="960" /></p>
+<p>Women favor shorter trips, but except for the case of Mexico, the differences do not look substantial. Trip time groups seem to be given by city characterstics and not individual gender patterns.</p>
+</div>
+<div id="distance-1" class="section level2" number="3.3">
+<h2 number="3.3"><span class="header-section-number">3.3</span> Distance</h2>
+<p><img src="04_socioeconomic_analysis_files/figure-html/unnamed-chunk-16-1.png" width="960" /></p>
+</div>
+<div id="commercial-speed" class="section level2" number="3.4">
+<h2 number="3.4"><span class="header-section-number">3.4</span> Commercial Speed</h2>
+<p><img src="04_socioeconomic_analysis_files/figure-html/unnamed-chunk-17-1.png" width="960" /></p>
+<p>Men travel slightly faster.</p>
+</div>
+<div id="motives-2" class="section level2" number="3.5">
+<h2 number="3.5"><span class="header-section-number">3.5</span> Motives</h2>
+<p><img src="04_socioeconomic_analysis_files/figure-html/unnamed-chunk-18-1.png" width="960" /></p>
+<p>Working is male dominated, and replaced, depending on the city, with activities like groceries, transporting someone, or errands.</p>
+</div>
+</div>
+<div id="age" class="section level1" number="4">
+<h1 number="4"><span class="header-section-number">4</span> Age</h1>
+<p>Below are explored patterns by age group.</p>
+<div id="mode-2" class="section level2" number="4.1">
+<h2 number="4.1"><span class="header-section-number">4.1</span> Mode</h2>
+<p><img src="04_socioeconomic_analysis_files/figure-html/unnamed-chunk-19-1.png" width="960" /></p>
+</div>
+<div id="trip-duration-2" class="section level2" number="4.2">
+<h2 number="4.2"><span class="header-section-number">4.2</span> Trip duration</h2>
+<p><img src="04_socioeconomic_analysis_files/figure-html/unnamed-chunk-20-1.png" width="960" /></p>
+</div>
+<div id="trip-distance" class="section level2" number="4.3">
+<h2 number="4.3"><span class="header-section-number">4.3</span> Trip distance</h2>
+<p><img src="04_socioeconomic_analysis_files/figure-html/unnamed-chunk-21-1.png" width="960" /></p>
+</div>
+<div id="commercial-speed-1" class="section level2" number="4.4">
+<h2 number="4.4"><span class="header-section-number">4.4</span> Commercial Speed</h2>
+<p><img src="04_socioeconomic_analysis_files/figure-html/unnamed-chunk-22-1.png" width="960" /></p>
+</div>
+<div id="motives-3" class="section level2" number="4.5">
+<h2 number="4.5"><span class="header-section-number">4.5</span> Motives</h2>
+<p><img src="04_socioeconomic_analysis_files/figure-html/unnamed-chunk-23-1.png" width="960" /></p>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
