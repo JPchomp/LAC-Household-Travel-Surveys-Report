@@ -23,6 +23,8 @@ Then the maps section combines the different modal flows with the socioeconomic 
 
 [Santiago](https://jpchomp.github.io/LAC-Household-Travel-Surveys-Report/Santiago_flow_lines.html)
 
+Observation: The strata background layer was compiled using the origin-destination surveys data, and may therefore not correspond to more granular, socioeconomic strata information from the respective cities. It should be understood as a proxy to the actual catastral distribution. 
+
 ### Support or Contact
 
 For questions or comments please contact [Juan Pablo Bertucci](juanpablo222@gmail.com)
