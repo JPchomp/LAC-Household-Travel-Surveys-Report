@@ -1,6 +1,6 @@
 ## Household Survey Maps
 
-This is webpage contains the main results from the consolidated household travel surveys of Bogota, Montevideo, Sao Paulo, Mexico City, Santiago and Buenos Aires. Within the analyses there is a general overview of the variables considered and information on the surveys geographic coverage. 
+This webpage contains the main results from the consolidated household travel surveys of Bogota, Montevideo, Sao Paulo, Mexico City, Santiago and Buenos Aires. Within the analyses there is a general overview of the variables considered and information on the surveys geographic coverage. 
 
 Considering mobility data can be generally unfolded into trip data and individual characteristics, the first analysis focuses on the time dimension of the trips performed and the second one on individuals and the non-time related aspects of the trip (mode, distance, motives, etc). 
 
